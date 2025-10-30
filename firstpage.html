@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/firstpage.css">
+</head>
+
+<body>
+    <!-- first page -->
+    <div class="myday" style="position: relative;">
+        <aside>
+            <h2>MyDay Web</h2>
+            <ul>
+                <li><a href="#myday" class="active"><i class="fa-solid fa-house"></i> My Day </a></li>
+                <li><a href="#important"><i class="fa-regular fa-star"></i> Important </a></li>
+                <li><a href="#planned"><i class="fa-regular fa-calendar"></i> Planned </a></li>
+                <li> <a href="#alltasks"><i class="fa-solid fa-check-to-slot"></i> All Tasks </a></li>
+            </ul>
+        </aside>
+        <div class="body">
+            <div class="container">
+                <div class="head">
+                    <div class="beside">
+                        <i class="fa-solid fa-sun"></i>
+                        <div class="days">
+                            <h2>My Day</h2>
+                            <p id="date"></p>
+                        </div>
+                    </div>
+                    <button>+ Add Task </button>
+                </div>
+                <div class="view-tasks">
+                    <p>Today's Progress</p>
+                    <p>0 of 0 completed</p>
+                    <div class="progress">
+                        <div id="progress-bar" class="progress-bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks-list"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------- -->
+    <!--modal  -->
+    <div class="modal" style="position: absolute;">
+        <div class="container">
+            <div class="head">
+                <h3>Add New Task</h3>
+                <p>create a new task with details like periorety, tags, and due date</p>
+            </div>
+            <div class="body">
+                <form action="">
+                    <h5>Title <span>*</span></h5>
+                    <input type="text" placeholder="what do you want to do?"
+                        style="display: block; width: 90%; padding:8px; border-radius: 3px;">
+                    <p>Press Enter to add, Shift+Enter to add and stay open</p>
+                    <h5>Description</h5>
+                    <textarea name="" id="" placeholder="Add more details..."
+                        style="display: block; width: 90%; padding:8px; border-radius: 3px;"></textarea>
+                    <h5>Due Date</h5>
+                    <input type="date" placeholder="mm/dd/yyyy"
+                        style="display: block; width: 90%; padding:8px; border-radius: 3px;">
+                    <p>pick a date or choose Today / Tomorrow</p>
+                    <h5>Priority</h5>
+                    <div class="choices">
+                        <button value="low">Low</button>
+                        <button value="medium">Medium</button>
+                        <button value="high">High</button>
+                    </div>
+                    <h5>Tags</h5>
+                    <input type="text" placeholder="Add tags..."
+                        style="display: block; width: 90%; padding:8px; border-radius: 3px;">
+                    <p>Press Enter to add tag. Max 6 tags.</p>
+                    <h5>Status </h5>
+                    <select name="" id="" placeholder="To Do"
+                        style="display: block; width: 90%; padding:8px; border-radius: 3px; margin-bottom: 70px; ">
+                        <option value="important">Important</option>
+                        <option value="Planned">Planned</option>
+                    </select>
+            </div>
+            <hr>
+            <input type="submit" value="Add Task" class="add-task"
+                style=" width: 65%; padding:8px; border-radius: 3px; margin-right: 10px; color:white; background-color: #22C55E ;border: none;">
+            <input type="button" value="Cancel" class="close-modal"
+                style=" width: 30%; padding:8px; border-radius: 3px; background-color: white; border:.5px solid #b5b4b4;">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/firstpage.js"> </script>
+</body>
+
+</html>

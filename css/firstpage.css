@@ -1,0 +1,277 @@
+al Rules */ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: clip;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+/* first page */
+.myday {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+aside {
+    position: relative;
+    left: 0;
+}
+
+aside h2 {
+    border-bottom: .8px solid #D4D4D8;
+    border-right: .8px solid #D4D4D8;
+    font-size: 40px;
+    width: 100%;
+    margin: 0;
+    padding: 24px 0px 24px 0px;
+    text-align: center;
+}
+
+.myday aside ul {
+
+    padding: 24px 0px 0px 24px;
+    height: 100vh;
+    border-right: .8px solid #D4D4D8;
+
+}
+
+.myday aside ul li {
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.myday aside ul li a {
+    display: block;
+    color: black;
+    word-spacing: 3px;
+    text-decoration: none;
+    padding: 8px 40% 8px 10px;
+    border-radius: 8px;
+}
+
+.myday aside ul li a:hover {
+    background-color: #f5f5f8
+}
+
+.myday aside ul li a.active {
+    background-color: #f5f5f8;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.body .container {
+    width: 90%;
+    position: relative;
+
+}
+
+.body .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.body .head .beside {
+    display: flex;
+    line-height: .5;
+}
+
+.body .head .beside i {
+    left: -35px;
+    font-size: 20px;
+    padding: 13px;
+    background: linear-gradient(to top, #0090FF, #5EB1EF);
+    top: 35px;
+    margin-right: 5px;
+    border-radius: 8px;
+    color: white;
+    position: absolute;
+}
+
+.body .head button {
+    padding: 10px 20px;
+    background-color: #22C55E;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*  ------------------------------- */
+/* modal */
+.modal {
+    visibility: hidden;
+    /* display: none; */
+    /* position: fixed; */
+    background-color: white;
+    z-index: 1;
+    left: 35%;
+    bottom: -30%;
+    width: 512px;
+    height: 100hv;
+    margin: 0 auto;
+    position: relative;
+}
+
+.modal::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.modal .container {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal .head h3 {
+    font-size: 18px;
+    line-height: .2;
+}
+
+.modal .head p {
+    font-size: 14px;
+    color: #737373;
+
+}
+
+.modal .body span {
+    color: red;
+}
+
+.modal .body h5 {
+    font-size: 14px;
+    line-height: 0;
+    margin-bottom: 10px;
+}
+
+.modal .body p {
+    color: #737373;
+}
+
+form .choices button {
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #737373;
+    padding: 8px 10%;
+}
+
+form .choices {
+    justify-content: space-around;
+    text-align: center;
+    width: 90%;
+    padding: 8px;
+    border-radius: 3px;
+
+    display: flex;
+    background-color: #F5F5F5;
+
+}
+
+form .choices button:hover {
+    background-color: #FFF8E6;
+    color: #854D0E;
+}
+
+.modal .body button.active {
+    background-color: #FFF8E6;
+    color: #854D0E;
+
+}
+
+.body .progress {
+    margin-top: 20px;
+    background-color: #17171733;
+    border-radius: 8px;
+    height: 8px;
+    width: 100%;
+    position: relative;
+}
+
+.body .progress .progress-bar {
+    background-color: #171717;
+    height: 100%;
+    width: 0%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.body .view-tasks {
+    margin-top: 20px;
+    padding: 10px;
+    padding-top: 20px;
+    border: 1px solid #D4D4D8;
+    border-radius: 8px;
+}
+
+.body .view-tasks p {
+    display: inline;
+    justify-content: space-between;
+    color: #737373;
+}
+
+.body .view-tasks p:last-of-type {
+    line-height: 0;
+    position: relative;
+    color: #171717;
+    float: right;
+}
+
+.body .tasks-list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #D4D4D8;
+    border-radius: 6px;
+}
+
+.task-item {
+    display: flex;
+}
+
+.task-info {
+    margin-left: 15px;
+}
+
+.task-info p {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+}
